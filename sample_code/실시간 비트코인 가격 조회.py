@@ -4,7 +4,7 @@ from PyQt5 import uic
 from PyQt5.QtCore import *
 # import pykorbit
 
-form_class = uic.loadUiType("test.ui")[0]
+form_class = uic.loadUiType("실시간 가격 조회.ui")[0]
 
 
 class MyWindow(QMainWindow, form_class):
