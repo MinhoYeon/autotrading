@@ -1,4 +1,4 @@
-from pandas import Series
+from sample_code.pandas import Series
 ##시리즈
 #생성
 date = ['2018-08-01', '2018-08-02', '2018-08-03', '2018-08-04', '2018-08-05']
@@ -14,7 +14,7 @@ print(s1)
 print(s2)
 
 ##데이터프레임
-from pandas import DataFrame
+from sample_code.pandas import DataFrame
 #생성
 data = {'open': [100, 200], 'high': [110, 210]}
 df = DataFrame(data, index=['18-02-01', '18-02-03'] )
@@ -34,7 +34,8 @@ upper = df['open']*2
 df['upper'] = upper
 print(df)
 
-import pandas as pd
+from sample_code import pandas as pd
+
 #엑셀
 df = pd.read_excel('pandas_excel.xlsx')
 print(df)
