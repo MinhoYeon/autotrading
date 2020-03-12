@@ -8,6 +8,7 @@ starting = time.time()
 ep = 'https://api.binance.com'
 candle = '/api/v3/klines'
 
+total_datetime = []
 start_date = []
 start_time = []
 openn = []
@@ -15,10 +16,10 @@ high = []
 low = []
 close = []
 volume = []
-total_datetime = []
-start = 1504224000000  # 17년 9월 1일 09:00:00 최초날짜
 
+start = 1504224000000  # 17년 9월 1일 09:00:00 최초날짜
 # start = 1582748490000 # 테스트를 위해 최근만 받아옴 (20년 2월 27일~)
+
 first_params_candle = {'symbol': 'BTCUSDT', 'interval': '1h', 'startTime': start, 'limit': 1}  # 초기세팅
 r1 = requests.get(ep + candle, params=first_params_candle)
 
@@ -53,4 +54,4 @@ df = pd.DataFrame(chartData,
                            'priceClose', 'amount'])
 
 df = df.sort_values(by=['TotalTime'], ascending=True)
-df.to_csv("C:/coding/coin/data/BTCUSDT_1hour.csv", header=True, index=False)  # csv파일로 저장
+df.to_csv("BTCUSDT_1hour.csv", header=True, index=False)  # csv파일로 저장
